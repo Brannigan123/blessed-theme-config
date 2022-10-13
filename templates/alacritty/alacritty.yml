@@ -1,0 +1,95 @@
+live_config_reload: true
+
+env:
+   TERM: xterm-256color
+
+window:
+   padding:
+      x: {{ theme.measurements.padding }}
+      y: {{ theme.measurements.padding }}
+   decorations: none
+
+scrolling:
+   history: 2000
+
+cursor:
+   style:
+      shape: Beam
+   unfocused_hollow: true
+   thickness: 1.0
+
+font:
+   normal:
+      family: {{ theme.fonts.font0 }}
+      style: Regular
+   bold:
+      family: {{ theme.fonts.font0 }}
+      style: Bold
+   italic:
+      family: {{ theme.fonts.font0 }}
+      style: Italic
+   bold_italic:
+      family: {{ theme.fonts.font0 }}
+      style: Bold Italic
+      
+   size: {{ theme.fonts.font0_size - 1 }}
+
+   offset:
+      x: 0
+      y: 0
+
+   glyph_offset:
+      x: 0
+      y: 0
+
+   builtin_box_drawing: true
+
+colors:
+   primary:
+      background: "{{ theme.colors.background }}"
+      foreground: "{{ theme.colors.foreground }}"
+
+   cursor:
+      text: CellBackground
+      cursor: CellForeground
+
+   vi_mode_cursor:
+      text: CellBackground
+      cursor: CellForeground
+
+   search:
+      matches:
+         foreground: "{{ theme.colors.gray }}"
+         background: "{{ theme.colors.green }}"
+      focused_match:
+         foreground: "{{ theme.colors.gray }}"
+         background: "{{ theme.colors.orange }}"
+      colors.footer_bar:
+         background: "{{ theme.colors.black }}"
+         foreground: "{{ theme.colors.white }}"
+
+   hints:
+      start:
+         foreground: "{{ theme.colors.black }}"
+         background: "{{ theme.colors.orange }}"
+      end:
+         foreground: "{{ theme.colors.orange }}"
+         background: "{{ theme.colors.black }}"
+
+   line_indicator:
+      foreground: None
+      background: None
+
+   selection:
+      text: CellForeground
+      background: '{{ theme.colors.gray }}'
+
+   normal:
+      black: "{{ theme.colors.black }}"
+      red: "{{ theme.colors.red }}"
+      green: "{{ theme.colors.green }}"
+      yellow: "{{ theme.colors.yellow }}"
+      blue: "{{ theme.colors.blue }}"
+      magenta: "{{ theme.colors.magenta }}"
+      cyan: "{{ theme.colors.cyan }}"
+      white: "{{ theme.colors.white }}"

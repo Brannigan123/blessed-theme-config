@@ -1,0 +1,32 @@
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+XTerm.termName: xterm-256color
+XTerm.vt100.locale: false
+XTerm.vt100.utf8: true
+XTerm.vt100.metaSendsEscape: true
+XTerm.vt100.saveLines: 4096
+XTerm.vt100.scrollBar: false
+
+*background: {{ theme.colors.background }}
+*foreground: {{ theme.colors.foreground }}
+*color0: {{ theme.colors.black }}
+*color1: {{ theme.colors.red }}
+*color2: {{ theme.colors.green }}
+*color3: {{ theme.colors.yellow }}
+*color4: {{ theme.colors.blue }}
+*color5: {{ theme.colors.magenta }}
+*color6: {{ theme.colors.cyan }}
+*color7: {{ theme.colors.white }}
+*color8: {{ theme.colors.gray }}
+*color9: {{ theme.colors.red }}
+*color10: {{ theme.colors.green }}
+*color11: {{ theme.colors.orange }}
+*color12: {{ theme.colors.blue }}
+*color13: {{ theme.colors.magenta }}
+*color14: {{ theme.colors.cyan }}
+*color15: {{ theme.colors.white }}

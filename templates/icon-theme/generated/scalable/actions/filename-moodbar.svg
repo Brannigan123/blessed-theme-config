@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" version="1.1" viewBox="0 0 24 24">
+ <g transform="translate(-417.70999,-527.78998)">
+  <rect style="fill:{{ theme.colors.orange }}" width="2" height="10" x="425.71" y="534.79"/>
+  <rect style="fill:{{ theme.colors.green }}" width="2" height="10" x="429.71" y="534.79"/>
+  <rect style="fill:{{ theme.colors.background }}" width="2" height="10" x="433.71" y="534.79"/>
+  <rect style="fill:{{ theme.colors.yellow }}" width="2" height="10" x="423.71" y="534.79"/>
+  <rect style="fill:{{ theme.colors.blue }}" width="2" height="10" x="431.71" y="534.79"/>
+  <rect style="fill:{{ theme.colors.green }}" width="2" height="10" x="427.71" y="534.79"/>
+ </g>
+</svg>

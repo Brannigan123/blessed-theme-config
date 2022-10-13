@@ -1,0 +1,11 @@
+<svg width="64" height="64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <rect x="6" y="4" width="52" height="56" rx="8" ry="8" fill="{{ theme.colors.gray }}" stroke-width="1.0009"/>
+ <g transform="matrix(.97297 0 0 .97297 .37838 1.3514)">
+  <path d="m32.5 31.5h-18.5c0-10.217 8.2827-18.5 18.5-18.5z" fill="{{ theme.colors.green }}"/>
+  <path d="m32.5 31.5h-18.5c0 10.217 8.2827 18.5 18.5 18.5z" fill="{{ theme.colors.blue }}"/>
+  <path d="m32.5 31.5h18.5c0 10.217-8.2827 18.5-18.5 18.5z" fill="{{ theme.colors.red }}"/>
+  <path d="m32.5 31.5h18.5c0-10.217-8.2827-18.5-18.5-18.5z" fill="{{ theme.colors.yellow }}"/>
+  <circle cx="32.5" cy="31.5" r="15.417" fill="{{ theme.colors.gray }}" stroke-width=".99462"/>
+  <circle cx="32.5" cy="31.5" r="8.2222" fill="{{ theme.colors.background }}" stroke-width=".96732"/>
+ </g>
+</svg>

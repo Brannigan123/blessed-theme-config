@@ -1,0 +1,167 @@
+configuration{
+    modi: "run,drun,window,filebrowser";
+    lines: 5;
+    font: "Iosevka Nerd Font 10";
+    show-icons: true;
+    icon-theme: "{{ theme_name }}";
+    terminal: "alacritty";
+    drun-display-format: "{name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "    Apps  ";
+    display-run: "     Run  ";
+    display-window: "     Windows  ";
+    display-filebrowser: "    Files  ";
+    sidebar-mode: true;
+	kb-row-up: "Up,Control+k";
+	kb-row-down: "Down,Control+j";
+	kb-row-left: "Control+h";
+	kb-row-right: "Control+l";
+	kb-remove-char-back: "BackSpace,Shift+BackSpace";
+	kb-mode-complete: "";
+	kb-accept-entry: "Return,KP_Enter";
+	kb-mode-next: "Tab";
+	kb-row-tab: "";
+	kb-remove-to-eol: "";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: {{ theme.colors.background }};
+    text-color:  {{ theme.colors.foreground }};
+}
+
+window {
+    transparency: "real";
+    height: 500px;
+    border: {{ theme.measurements.border_width }} px;
+    border-color: {{ theme.colors.foreground }};
+    background-color: {{ theme.colors.background }};
+    border-radius: 15;
+}
+
+mainbox {
+    background-color: {{ theme.colors.background }};
+    children: [ mode-switcher, inputbar, listview ];
+}
+
+mode-switcher {
+    margin: {{ 6 * theme.measurements.margin }} {{ 3 * theme.measurements.margin }} {{ theme.measurements.margin }} {{ 3 * theme.measurements.margin }};
+}
+
+button {
+    padding: {{ 4 * theme.measurements.padding }}px;
+    margin: {{ theme.measurements.margin }}px;
+    background-color: {{ theme.colors.gray }};
+    text-color: {{ theme.colors.foreground }};
+    border-radius: 10px;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color:  {{ theme.colors.green }};
+  text-color: {{ theme.colors.background }};
+}
+
+inputbar {
+    margin: {{ 5 * theme.measurements.margin }} {{ 3 * theme.measurements.margin }} {{ theme.measurements.margin }} {{ 3 * theme.measurements.margin }};
+    children: [prompt,entry];
+}
+
+prompt {
+    padding: {{ 4 * theme.measurements.padding }}px;
+    margin: {{ theme.measurements.margin }}px;
+    background-color: {{ theme.colors.blue }};
+    text-color: {{ theme.colors.background }};
+    border-radius: 5px;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+}
+
+entry {
+    padding: {{ 4 * theme.measurements.padding }}px;
+    margin: {{ theme.measurements.margin }}px;
+    text-color: {{ theme.colors.foreground }};
+    background-color: {{ theme.colors.background }};
+    vertical-align: 0.5;
+}
+
+listview {
+    margin: {{ 5 * theme.measurements.margin }} {{ 3 * theme.measurements.margin }} {{ theme.measurements.margin }} {{ 3 * theme.measurements.margin }};
+    border-color: {{ theme.colors.background }};
+    scrollbar: false;
+    columns: 3;
+}
+
+element {
+    enabled: true;
+    spacing: {{ 5 * theme.measurements.margin }}px;
+    margin: 0px;
+    padding: {{ 3 * theme.measurements.padding }}px;
+    border: 0px solid;
+    border-radius:  4px;
+    text-color: {{ theme.colors.foreground }};
+    cursor: pointer;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size:  24px;
+    cursor: inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    highlight: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+element normal.normal {
+    background-color: {{ theme.colors.background }};
+    text-color: {{ theme.colors.foreground }};
+}
+
+element normal.active {
+    background-color: {{ theme.colors.background }};
+    text-color: {{ theme.colors.foreground }};
+}
+
+element normal.urgent {
+    background-color: {{ theme.colors.background }};
+    text-color: {{ theme.colors.foreground }};
+}
+
+element alternate.normal {
+    background-color: {{ theme.colors.background }};
+    text-color: {{ theme.colors.foreground }};
+}
+
+element alternate.active {
+    background-color: {{ theme.colors.background }};
+    text-color: {{ theme.colors.foreground }};
+}
+
+element alternate.urgent {
+    background-color: {{ theme.colors.background }};
+    text-color: {{ theme.colors.foreground }};
+}
+
+element selected.normal {
+    background-color: {{ theme.colors.red }};
+    text-color: {{ theme.colors.background }};
+}
+
+element selected.active {
+    background-color: {{ theme.colors.red }};
+    text-color: {{ theme.colors.background }};
+}
+
+element selected.urgent {
+    background-color: {{ theme.colors.red }};
+    text-color: {{ theme.colors.background }};
+}

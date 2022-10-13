@@ -1,0 +1,97 @@
+[global]
+    monitor = 0
+    follow = mouse
+    geometry = "300x60-15+46"
+    indicate_hidden = yes
+    shrink = yes
+    transparency = 0
+    notification_height = 0
+    separator_height = {{ theme.measurements.margin }}
+    padding = {{ 2 * theme.measurements.padding }}
+    horizontal_padding = {{ 1.5 * theme.measurements.padding }}
+    frame_width = {{ theme.measurements.border_width }}
+    frame_color = "{{ theme.colors.blue }}"
+    separator_color = "{{ theme.colors.gray }}"
+    sort = yes
+    idle_threshold = 120
+
+    font = {{ theme.fonts.font0 }} {{ theme.fonts.font0_size }}
+
+    line_height = 0
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    show_age_threshold = 60
+    word_wrap = yes
+    ellipsize = middle
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 48
+    icon_path = "{{ env.HOME }}/.local/share/icons/{{ theme_name }}/scalable/status:{{ env.HOME }}/.local/share/icons/{{ theme_name }}/scalable/panel:{{ env.HOME }}/.local/share/icons/{{ theme_name }}/scalable/devices:{{ env.HOME }}/.local/share/icons/{{ theme_name }}/scalable/apps"
+    sticky_history = yes
+    history_length = 20
+
+    ignore_dbusclose = false
+
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/firefox -new-tab
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+
+    startup_notification = false
+    verbosity = mesg
+    corner_radius = 10
+
+    mouse_left_click = close_current
+    mouse_middle_click = do_action
+    mouse_right_click = close_all
+
+
+[experimental]
+    per_monitor_dpi = true
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    context = ctrl+shift+grave
+
+[urgency_low]
+    background = "{{ theme.colors.background }}"
+    foreground = "{{ theme.colors.foreground }}"
+    frame_color =  "{{ theme.colors.green }}"
+    timeout = 10
+    icon = yum-indicator-info
+
+[urgency_normal]
+    background = "{{ theme.colors.background }}"
+    foreground = "{{ theme.colors.foreground }}"
+    frame_color = "{{ theme.colors.magenta }}"
+    timeout = 10
+    icon = normal-notif-symbolic
+
+[urgency_critical]
+    background = "{{ theme.colors.background }}"
+    foreground = "{{ theme.colors.foreground }}"
+    frame_color =  "{{ theme.colors.red }}"
+    timeout = 0
+    icon = yum-indicator-error
+
+[backlight]
+    appname = "Backlight"
+    highlight = "{{ theme.colors.yellow }}"
+
+[music]
+    appname = "Music"
+
+[volume]
+    summary = "Volume*"
+    highlight = "{{ theme.colors.blue }}"
+
+[battery]
+    appname = "Power Warning"

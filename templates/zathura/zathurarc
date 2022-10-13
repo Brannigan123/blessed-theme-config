@@ -1,0 +1,50 @@
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+
+set notification-error-bg       "{{ theme.colors.red }}"
+set notification-error-fg       "{{ theme.colors.background }}"
+set notification-warning-bg     "{{ theme.colors.orange }}"
+set notification-warning-fg     "{{ theme.colors.gray }}"
+set notification-bg             "{{ theme.colors.background }}"
+set notification-fg             "{{ theme.colors.foreground }}"
+
+set completion-bg               "{{ theme.colors.background }}"
+set completion-fg               "{{ theme.colors.blue }}"
+set completion-group-bg         "{{ theme.colors.background }}"
+set completion-group-fg         "{{ theme.colors.blue }}"
+set completion-highlight-bg     "{{ theme.colors.gray }}"
+set completion-highlight-fg     "{{ theme.colors.foreground }}"
+
+set index-bg                    "{{ theme.colors.background }}"
+set index-fg                    "{{ theme.colors.foreground }}"
+set index-active-bg             "{{ theme.colors.gray }}"
+set index-active-fg             "{{ theme.colors.foreground }}"
+
+set inputbar-bg                 "{{ theme.colors.background }}"
+set inputbar-fg                 "{{ theme.colors.foreground }}"
+set statusbar-bg                "{{ theme.colors.background }}"
+set statusbar-fg                "{{ theme.colors.foreground }}"
+
+set highlight-color             "{{ theme.colors.orange }}"
+set highlight-active-color      "{{ theme.colors.magenta }}"
+
+set default-bg                  "{{ theme.colors.background }}"
+set default-fg                  "{{ theme.colors.foreground }}"
+
+set render-loading              true
+set render-loading-fg           "{{ theme.colors.foreground }}"
+set render-loading-bg           "{{ theme.colors.background }}"
+
+#
+# Recolor mode settings
+#
+
+set recolor-lightcolor          "{{ theme.colors.background }}"
+set recolor-darkcolor           "{{ theme.colors.foreground }}"
+
+#
+# Startup options
+#
+set adjust-open width
+set recolor true
+

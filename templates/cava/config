@@ -1,0 +1,55 @@
+
+# Configuration file for CAVA. Default values are commented out.  Use either ; or # for commenting.
+
+[general]
+framerate = 60
+autosens = 1
+overshoot = 10
+
+bar_width = {{ theme.measurements.border_width }}
+bar_spacing = {{ theme.measurements.margin }}
+
+win_bar_width = {{ theme.measurements.border_width }}
+win_bar_spacing = {{ theme.measurements.margin }}
+
+window_width = 240
+window_height = 190
+window_border = 0
+window_transparency = 1
+window_keep_below = 1
+window_alignment = 'bottom'
+window_x_padding = {{ theme.measurements.padding }}
+window_y_padding = {{ theme.measurements.padding }}
+
+
+[input]
+
+
+[output]
+method = 'ncurses'
+style = stereo 
+
+
+[color]
+gradient = 1
+gradient_color_1 = "{{ theme.colors.foreground }}"
+gradient_color_2 = "{{ theme.colors.green }}"
+gradient_color_3 = "{{ theme.colors.blue }}"
+gradient_color_4 = "{{ theme.colors.blue }}"
+gradient_color_5 = "{{ theme.colors.blue }}"
+gradient_color_6 = "{{ theme.colors.magenta }}"
+gradient_color_7 = "{{ theme.colors.magenta }}"
+gradient_color_8 = "{{ theme.colors.red }}"
+
+
+[smoothing]
+monstercat = 1 
+ignore = 1
+
+
+[eq]
+1 = 1 # bass
+2 = 1
+3 = 1 # midtone
+4 = 1
+5 = 1 # treble

@@ -1,0 +1,101 @@
+variables:
+
+  theme_id: b-theme
+  theme_name: B-Theme
+
+
+pipelines:
+
+  base:
+  - xresources
+  - font-config
+  - alacritty
+
+  qt:
+  - qt5ct
+
+  gtk:
+  - gtk
+  - gtk3
+  - gtk4
+
+  icons:
+  - icons
+
+
+templates:
+
+  xresources:
+    template: ~/.config/theme/templates/x11/.Xresources
+    destination: ~/.Xresources
+    post-hook:
+     - 'xrdb -merge {{ env.HOME }}/.Xresources'
+
+  font-config:
+    template: ~/.config/theme/templates/fontconfig/fonts.conf
+    destination: ~/.config/fontconfig/fonts.conf
+
+  icons:
+    template: ~/.config/theme/templates/icon-theme/generated
+    destination: ~/.local/share/icons/{{ theme_name }}
+    pre-hook:
+    - update_b_icon_theme
+    post-hook:
+    - gtk-update-icon-cache
+
+  qt5ct:
+    template: ~/.config/theme/templates/qt5ct
+    destination: ~/.config/qt5ct/
+
+  gtk:
+    template: ~/.config/theme/templates/gtk-theme
+    destination: ~/.themes/{{ theme_name }}
+    unaltered:
+    - .*\.png
+
+  gtk3:
+    template: ~/.config/theme/templates/gtk3.0
+    destination: ~/.config/gtk-3.0
+
+  gtk4:
+    template: ~/.config/theme/templates/gtk4.0
+    destination: ~/.config/gtk-4.0
+
+  codium:
+    template: ~/.config/theme/templates/vscodium/color_theme_generator
+    destination: ~/.vscode-oss/extensions/{{ theme_name }}
+    unaltered:
+    - .*\.json
+    variables:
+      prefix: 'npm -s --prefix ~/.vscode-oss/extensions'
+    post-hook:
+    - '{{ prefix }}/{{ theme_name }} install'
+    - '{{ prefix }}/{{ theme_name }} run tsc'
+    - '{{ prefix }}/{{ theme_name }} run gen'
+
+  cava:
+    template: ~/.config/theme/templates/cava/config
+    destination: ~/.config/cava/config
+
+  zathura:
+    template: ~/.config/theme/templates/zathura/zathurarc
+    destination: ~/.config/zathura/zathurarc
+
+  dunst:
+    template: ~/.config/theme/templates/dunst/dunstrc
+    destination: ~/.config/dunst/dunstrc
+    post-hook:
+    - 'sh {{ env.HOME }}/.config/dunst/start.sh'
+
+  alacritty:
+    template: ~/.config/theme/templates/alacritty/alacritty.yml
+    destination: ~/.config/alacritty/alacritty.yml
+
+  rofi:
+    template: ~/.config/theme/templates/rofi/config.rasi
+    destination: ~/.config/rofi/config.rasi
+
+  qtile:
+    pre-hook: 
+      - 'qtile cmd-obj -o cmd -f restart'
+ 

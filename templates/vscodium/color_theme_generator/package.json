@@ -1,0 +1,32 @@
+{
+  "name": "{{ theme_id }}",
+  "displayName": "B Theme",
+  "publisher": "Brannigan Sakwah",
+  "description": "B Theme, on the fly theme generation",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "tsc index.ts >/dev/null 2>&1 || exit 0",
+    "gen": "node index.js >/dev/null 2>&1 || exit 0"
+  },
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "B theme",
+        "uiTheme": "vs-dark",
+        "path": "./theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.10",
+    "typescript": "^2.2.1",
+    "vscode-theme-generator": "*"
+  }
+}

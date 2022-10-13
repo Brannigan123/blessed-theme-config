@@ -1,0 +1,9 @@
+colors: nightowl
+fonts: snappy
+measurements:
+  border-width: 3
+  margin: 2
+  padding: 4
+wallpaper:
+  path: 17.jpeg
+  stretch: false

@@ -1,0 +1,36 @@
+# Based on Bridge by ScionicSpectre and Adwaita by GNOME
+# vim:set ts=2 sw=2 sts=2 ai et:
+#
+# This is the GTK 2 version of Materia. It's whole purpose is to look as the
+# GTK 3 version as much as possible until GTK 2 dies completely.
+#
+# Note: comments for explaining styles are on the bottom of each file beside the
+# widget matches.
+
+# Declare the colours used throughout the theme.
+# There shouldn't be any fiddling with them in the theme files themselves in
+# order to not mess up the dark theme.
+
+# Text/base
+gtk-color-scheme = "text_color:{{ theme.colors.foreground }}\nbase_color:{{ theme.colors.background }}"
+# Foreground/background
+gtk-color-scheme = "fg_color:{{ theme.colors.foreground }}\nbg_color:{{ theme.colors.background }}"
+# Selected foreground/background
+gtk-color-scheme = "selected_fg_color:{{ theme.colors.background }}\nselected_bg_color:{{ theme.colors.foreground }}"
+# Titlebar foreground/background
+gtk-color-scheme = "titlebar_fg_color:{{ theme.colors.foreground }}\ntitlebar_bg_color:{{ theme.colors.background }}"
+# Menus
+gtk-color-scheme = "menu_color:{{ theme.colors.background }}"
+# Tooltips foreground/background
+gtk-color-scheme = "tooltip_fg_color:{{ theme.colors.foreground }}\ntooltip_bg_color:{{ theme.colors.background }}"
+# Links
+gtk-color-scheme = "link_color:{{ theme.colors.cyan }}\nvisited_link_color:{{ theme.colors.magenta }}"
+
+# Set GTK settings
+gtk-auto-mnemonics              = 1
+gtk-primary-button-warps-slider = 1
+
+# And hand over the control to the theme files
+include "main.rc"
+include "apps.rc"
+include "hacks.rc"
