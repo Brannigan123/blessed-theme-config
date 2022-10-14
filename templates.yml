@@ -77,6 +77,10 @@ templates:
     template: ~/.config/theme/templates/cava/config
     destination: ~/.config/cava/config
 
+  termusic:
+    template: ~/.config/theme/templates/termusic/config.toml
+    destination: ~/.config/termusic/config.toml
+
   zathura:
     template: ~/.config/theme/templates/zathura/zathurarc
     destination: ~/.config/zathura/zathurarc
